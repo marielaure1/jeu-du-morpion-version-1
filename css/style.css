@@ -1,368 +1,518 @@
 /* GENERALE */
 :root {
-    font-family: 'Quantico', sans-serif;
-    --black: #000000;
-    --dark-grey: #242B36;
-    --dark-grey-active: #383E46;
-    --dark-purple: #3C1395;
-    --dark-blue: #4112FF;
-    --purple: #5E08CC;
-    --light-purple: #8208CC;
-    --light-blue: #009DDC;
-    --yellow: #E7BC00;
-    --white: #FFFFFF;
+  font-family: "Quantico", sans-serif;
+  --black: #000000;
+  --dark-grey: #242b36;
+  --dark-grey-active: #383e46;
+  --dark-purple: #3c1395;
+  --dark-blue: #4112ff;
+  --purple: #5e08cc;
+  --light-purple: #8208cc;
+  --light-blue: #009ddc;
+  --yellow: #e7bc00;
+  --white: #ffffff;
 }
 
-body{
-    height: 100vh;
-    /* overflow: hidden; */
-    background: linear-gradient(135deg, #4112FF, #5E08CC);
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #4112ff, #5e08cc);
 }
 
-header{
-    height: 20vh;
-    width: 100vw;
+header {
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-h1{
-    display: none;
+h1 {
+  display: none;
 }
 
-.logo{
-    width: 50%;
-    margin-left: 50%;
-    transform: translateX(-50%);
+.logo {
+  width: 30%;
 }
 
 /* CHARGEMENT */
-.chargement{
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 30vh;
+.chargement {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 30vh;
 }
 
 /* HOME */
-.home{
-    height: 80vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.home {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Description */
-.description{
-    color: #ffffff;
-    height: 240px;
-    width: 504px;
-    background-color: var(--light-purple);
-    border-radius: 30px;
-    margin-top: 12vh;
-    box-sizing: border-box;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 12px 12px 4px rgb(0, 0, 0, 0.25);
-    line-height: 50px;
+.description {
+  color: #ffffff;
+  height: 35%;
+  width: 40%;
+  background-color: var(--light-purple);
+  border-radius: 2rem;
+  margin-top: 12vh;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 12px 12px 4px rgb(0, 0, 0, 0.25);
+  line-height: 50px;
 }
 
-h3{
-    font-size: 24px;
-}
-h4{
-    font-size: 24px;
+h3, h4 {
+  font-size: 1rem;
 }
 
 /* BOUTONS */
-.btn-1{
-    display: block;
-    font-size: 24px;
-    color: var(--white);
-    padding: 30px 0;
-    width: 233px;
-    border-radius: 22px;
-    text-align: center;
-    box-shadow: 12px 12px 4px rgb(0, 0, 0, 0.25);
-    cursor: pointer;
+.btn-1 {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--white);
+  padding: 1.5rem 0;
+  width: 20%;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 12px 12px 4px rgb(0, 0, 0, 0.25);
+  cursor: pointer;
 }
-
 
 /* Play */
-.play{
-    margin-top: 10vh;
-    background-color: var(--yellow);
+.play {
+  margin-top: 10vh;
+  background-color: var(--yellow);
 }
 
-.play:hover{
-    background-color: var(--light-blue);
+.play:hover {
+  background-color: var(--light-blue);
+}
+
+/* GAME */
+
+.game {
+  display: none;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  width: 100%;
+}
+
+/* actions */
+.actions {
+  margin-bottom: 15px;
+  height: 10%;
+  width: 28%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.btn-2 {
+  height: 100%;
+  background-color: var(--dark-purple);
+  border-radius: 10px;
+  box-shadow: 0 4px 2px rgb(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-2 img {
+  width: 25%;
+}
+
+/* Cases */
+.cases {
+  margin-bottom: 20px;
+  width: 28%;
+  height: 65%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 21px 15px;
+}
+
+.case {
+  background-color: var(--dark-purple);
+  border-radius: 14px;
+  box-shadow: 0 6px 1px rgb(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.case.win {
+  background-color: var(--white);
+}
+
+.case .markOn {
+  height: 50px;
+  width: 50px;
+}
+
+/* Statut */
+.statut {
+  margin: 40px 0;
+  text-align: center;
+  display: flex;
+}
+
+.statut p {
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.statut svg {
+  height: 0.8rem;
+}
+
+/* Chrono */
+.chrono {
+  background-color: var(--dark-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chrono p {
+  color: var(--white);
+  font-size: 1rem;
+}
+
+/* Stats */
+.stats {
+  position: absolute;
+  top: 10vh;
+  right: 5%;
+  height: 218px;
+  width: 204px;
+  border-radius: 20px;
+  background-color: var(--light-purple);
+  box-shadow: 8px 8px 4px rgb(0, 0, 0, 0.25);
+}
+
+/* END */
+.end {
+  display: none;
+  background-color: rgba(65, 18, 255, 0.836);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  color: var(--white);
+}
+
+.winner {
+  margin-top: 20vh;
+  display: flex;
+  justify-content: center;
+}
+
+.winner p {
+  font-size: 34px;
+}
+
+.winner img {
+  height: 34px;
+  width: 34px;
+  margin-right: 20px;
+}
+
+.actions-end {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 5vh 0;
+}
+
+.btn-3 {
+  background-color: var(--dark-purple);
+  border-radius: 10px;
+  box-shadow: 0 4px 2px rgb(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 60px;
+  width: 120px;
+  margin-right: 15px;
+}
+
+.btn-3 img {
+  height: 43px;
+}
+
+.btn-3 .return-home {
+  margin-right: 20px;
+}
+
+.time {
+  font-size: 20px;
+  text-align: center;
 }
 
 /* Large Desktop */
-@media(min-width: 1600px){
-    .logo{
-        width: 25%;
-        margin-top: 6vh;
-        margin-left: 50%;
-        transform: translateX(-50%);
+@media (min-width: 1600px) {
+    /* Description */
+    .description {
+        max-height: 300px;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    h3, h4 {
+        font-size: 2rem;
+    }
+    
+    /* BOUTONS */
+    .btn-1 {
+        max-width: 200px;
+    }
+    
+    /* Play */
+    .play {
+        margin-top: 10vh;
+        background-color: var(--yellow);
+    }
+    
+    .play:hover {
+        background-color: var(--light-blue);
+    }
+
+    /* GAME */
+    /* actions */
+    .actions, .cases{
+        max-width: 700px;
+        max-height: 600px;
+    }
+
+    /* Statut */
+    .statut p {
+        font-size: 1.8rem;
+    }
+    
+    .statut svg {
+        height: 1.4rem;
+    }
+
+    /* END */
+    .winner {
+        margin-top: 30vh;
+    }
+    
+    .winner p {
+        font-size: 60px;
+    }
+    
+    .winner img {
+        height: 55px;
+        width: 55px;
+    }
+
+    .btn-3 {
+        height: 80px;
+        width: 200px;
+    }
+    
+    .btn-3 img {
+        height: 60px;
     }
 }
 
 /* Desktop */
-@media(min-width: 960px) and (max-width: 1599px){
-    .logo{
-        width: 25%;
-        margin-top: 8vh;
+@media (min-width: 960px) and (max-width: 1599px) {
+    .logo {
+        width: 30%;
     }
-
-    /* HOME */
-
+    
     /* Description */
-    .description{
-        height: 25vh;
-        width: 22vw;
-        border-radius: 1rem;
-        margin-top: 10vh;
-        text-align: center;
-        line-height: 20px;
+    .description {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
     }
-
-    h3{
-        font-size: 16px;
-        margin: 5% 0 8% 0;
+    
+    h3, h4 {
+        font-size: 1.2rem;
+        line-height: inherit;
     }
-
-    h4{
-        font-size: 16px;
-    }
-
+    
     /* BOUTONS */
-    .btn-1{
-        font-size: 18px;
-        padding: 20px 0;
-        width: 14%;
-        border-radius: 1rem;
-        text-align: center;
-        box-shadow: 12px 12px 4px rgb(0, 0, 0, 0.25);
-        cursor: pointer;
+        .btn-1 {
+        width: 15%;
     }
 
-
-    /* Play */
-    .play{
-        margin-top: 10vh;
-        background-color: var(--yellow);
+    /* GAME */
+    /* actions */
+    .actions {
+        width: 50%;
+        max-width: 300px;
     }
 
-    .play:hover{
-        background-color: var(--light-blue);
+    /* Cases */
+    .cases {
+        width: 50%;
+        height: 65%;
+        max-width: 300px;
+    }
+
+    /* Statut */
+    .statut p {
+        font-size: 1.2rem;
+    }
+    
+    .statut svg {
+        height: 1rem;
+    }
+
+    /* END */
+    .winner {
+        margin-top: 30vh;
+    }
+    
+    .winner p {
+        font-size: 60px;
+    }
+    
+    .winner img {
+        height: 55px;
+        width: 55px;
+    }
+
+    .btn-3 {
+        height: 80px;
+        width: 200px;
+    }
+    
+    .btn-3 img {
+        height: 60px;
     }
 }
 
 /* Tablet */
-@media(min-width: 768px) and (max-width:959px){
-    .logo{
-        width: 25%;
-        margin-top: 6vh;
-        margin-left: 50%;
-        transform: translateX(-50%);
+@media (min-width: 768px) and (max-width: 959px) {
+    .logo {
+        width: 50%;
     }
-}
 
-/* Smartphone */
-@media(max-width: 767px){
-    .logo{
-        width: 25%;
-        margin-top: 6vh;
-        margin-left: 50%;
-        transform: translateX(-50%);
+    /* Description */
+    .description {
+        width: 50%;
     }
-}
+    
+    h3, h4 {
+        font-size: 1rem;
+    }
+    
+    /* BOUTONS */
+        .btn-1 {
+        width: 15%;
+    }
 
+    /* GAME */
+    /* actions */
+    .actions {
+        width: 50%;
+        height: 10%;
+    }
 
+    /* Cases */
+    .cases {
+        width: 50%;
+        height: 50%;
+    }
 
+        /* Statut */
+        .statut p {
+            font-size: 1.8rem;
+        }
 
+        .statut svg {
+            height: 1.4rem;
+        }
+    }
 
+    /* Smartphone */
+    @media (max-width: 767px) {
+        header {
+            height: 20vh;
+            width: 100vw;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        
+    .logo {
+        width: 70%;
+    }
 
+    /* Description */
+    .description {
+        height: 25%;
+        width: 80%;
+        line-height: 30px;
+    }
 
+    /* BOUTONS */
+    .btn-1 {
+        width: 40%;
+    }
 
+    /* GAME */
+    /* actions */
+    .actions {
+        width: 70%;
+        height: 7%;
+    }
 
+    /* Cases */
+    .cases {
+        width: 70%;
+        height: 60%;
+    }
 
+    .case .markOn {
+        height: 35px;
+        width: 35px;
+    }
 
+    /* Statut */
+    .statut p {
+        font-size: 1.2rem;
+    }
 
+    .statut svg {
+        height: 1rem;
+    }
 
+    /* END */
+    .winner {
+        margin-top: 30vh;
+    }
 
-
-
-
-
-
-/* GAME */
-
-.game{
-    display: none;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 80vh;
-    width: 100%;
-}
-
-/* actions */
-.actions{
-    margin-bottom: 15px;
-    height: 10%;
-    width: 28%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-}
-
-.btn-2{
-    height: 100%;
-    background-color: var(--dark-purple);
-    border-radius: 10px;
-    box-shadow: 0 4px 2px rgb(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.btn-2 img{
-    width: 25%;
-}
-
-/* Cases */
-.cases{
-    margin-bottom: 20px;
-    width: 28%;
-    height: 65%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 21px 15px;
-}
-
-.case{
-    background-color: var(--dark-purple);
-    border-radius: 14px;
-    box-shadow: 0 6px 1px rgb(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.case.win{
-    background-color: var(--white);
-}
-
-.case .markOn{
-    height: 50px;
-    width: 50px;
-}
-
-/* Statut */
-.statut{
-    margin-bottom: 40px;
-    text-align: center;
-    display: flex;
-}
-
-.statut p{
-    font-size: 1rem;
-    color: var(--white);
-}
-
-.statut svg{
-    height: 0.8rem;
-}
-
-/* Chrono */
-.chrono{
-    background-color: var(--dark-purple);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.chrono p{
-    color: var(--white);
-    font-size: 1rem;
-}
-
-/* Stats */
-.stats{
-    position: absolute;
-    top: 10vh;
-    right: 5%;
-    height: 218px;
-    width: 204px;
-    border-radius: 20px;
-    background-color: var(--light-purple);
-    box-shadow: 8px 8px 4px rgb(0, 0, 0, 0.25);
-}
-
-/* END */
-.end{
-    display: none;
-    background-color: rgba(65, 18, 255, 0.836);
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    color: var(--white);
-}
-
-.winner{
-    margin-top: 20vh;
-    display: flex;
-    justify-content: center;
-}
-
-.winner p{
-    font-size: 34px;
-}
-
-.winner img{
-    height: 34px;
-    width: 34px;
-    margin-right: 20px;
-}
-
-.actions-end{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 5vh 0;
-}
-
-.btn-3{
-    background-color: var(--dark-purple);
-    border-radius: 10px;
-    box-shadow: 0 4px 2px rgb(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    height: 60px;
-    width: 120px;
-    margin-right: 15px;
-}
-
-.btn-3 img{
-    height: 43px;
-}
-
-.btn-3 .return-home{
-    margin-right: 20px;
-}
-
-.time{
-    font-size: 20px;
-    text-align: center;
+    @media (max-width: 767px){
+        /* GAME */
+        /* Cases */
+        .cases {
+            height: 50%;
+        }
+    }
 }

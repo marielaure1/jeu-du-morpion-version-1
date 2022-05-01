@@ -54,9 +54,46 @@ function chargementGame(){
     chargement.style.display = "block"
 }
 
+// Chrono
+
+let scd = 1
+let min = 1
+
+function chronometre(){
+    // Chrono
+    const minChrono = setInterval(() => {
+        if(min.toString().length == 1){
+            minutes.innerText = `0${min}`
+        } else if(min.toString().length == 2 && min != 60){
+            minutes.innerText = `${min}`
+        } else if(min == 60){
+            return
+        }
+        min++
+    }, 60000)
+    const scdChrono = setInterval(() => {
+        if(scd.toString().length == 1){
+            seconds.innerText = `0${scd}`
+        } else if(scd.toString().length == 2 && scd != 60){
+            seconds.innerText = `${scd}`
+        } else if(scd == 60){
+            scd = 0
+            seconds.innerText = `00`
+        }
+        scd++
+    }, 1000)
+}
+
+
+
 function gameSysteme(player){
     home.style.display = "none"
-    chargementGame()
+    // chargementGame()
+    scd = 1
+    min = 1
+
+    chronometre()
+
     chargement.style.display = "none" 
     game.style.display = "flex" 
     
@@ -152,6 +189,7 @@ function retryGame(){
 
     gameSysteme(playerOn)
 }
+
 
 // RECOMMENCER
 retry.forEach((btn) => {

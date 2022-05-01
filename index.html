@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <title>Jeu du Morpion</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jeu de Morpion" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+        <h1>Jeu du Morpion</h1>
+        <img src="./images/logo.svg" alt="logo" class="logo" />
+    </header>
+    <!-- CHARGEMENT -->
+    <img src="./images/icon-chargement.svg" alt="" class="chargement" />
+
+    <!-- HOME -->
+    <div class="home">
+        <div class="description">
+            <h3>Bienvenue !</h3>
+            <h4>Il faut 2 joueurs pour jouer à ce jeu.</h4>
+        </div>
+
+        <a class="btn-1 play">Jouer</a>
+    </div>
+
+    <!-- GAME -->
+    <div class="game">
+        <div class="actions">
+            <div class="btn-2 chrono"></div>
+            <a class="btn-2 return-home"><img src="./images/icon-home.svg" alt="" /></a>
+            <a class="btn-2 retry"><img src="./images/icon-retry.svg" alt="" /></a>
+        </div>
+
+        <div class="cases">
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+            <div class="case"></div>
+        </div>
+
+        <div class="statut">
+            <p>C'est au tour de
+                <span class="tour">
+                    <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_6_146)">
+                            <path d="M10.0559 46.2817L23.9999 32.337C28.6477 36.9832 33.2969 41.634 37.9455 46.2817C43.323 51.6592 51.6585 43.3207 46.2855 37.9417C41.6362 33.297 36.9854 28.6455 32.3414 23.9978C36.9876 19.3479 41.6356 14.6999 46.2855 10.0537C51.6585 4.67775 43.3222 -3.6585 37.9455 1.71375C33.2977 6.363 28.6484 11.013 24.0007 15.6593L10.0567 1.71375C4.6792 -3.66225 -3.65855 4.677 1.7167 10.0537C6.36595 14.703 11.0137 19.3508 15.6644 23.9993C11.0144 28.6485 6.3667 33.2978 1.7167 37.9463C-3.6593 43.3208 4.67845 51.6592 10.0567 46.2787" fill="#009DDC"/>
+                       </g>
+                       <defs>
+                            <clippath id="clip0_6_146">
+                                <rect width="48" height="48" fill="white" transform="translate(48 48) rotate(-180)"/>
+                            </clippath>
+                        </defs>
+                    </svg>
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <!-- END -->
+    <div class="end">
+        <div class="winner"></div>
+        <div class="actions-end">
+            <a class="btn-3 return-home"><img src="./images/icon-home.svg" alt="" /></a>
+            <a class="btn-3 retry"><img src="./images/icon-retry.svg" alt="" /></a>
+        </div>
+    </div>
+    
+  </body>
+</html>
